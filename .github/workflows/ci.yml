@@ -1,4 +1,4 @@
-name: Deploy Hugo Site
+name: 🧪 CI
 
 on:
   push:
