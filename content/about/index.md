@@ -40,6 +40,12 @@ Driven by curiosity and problem-solving, I’m always looking for new challenges
 <img alt="Gallery Image" src="https://images.unsplash.com/photo-1660209034425-d22574bb176c" class="grid-w33" />
 {{< /gallery >}}
 
+<br />
+
+{{< button href="https://unsplash.com/@ziroau" target="_self" >}}
+{{< icon "camera-solid" >}} See my Unsplash Profile
+{{< /button >}}
+
 ---
 
 ## Stack
@@ -159,9 +165,3 @@ Tools, software and technologies I have considerable experience in using (in no 
 
 - {{< icon "firefoxbrowser" >}} **Firefox**
 - {{< icon "edge-brands-solid" >}} **Microsoft Edge**
-
-<br />
-
-{{< button href="https://unsplash.com/@ziroau" target="_self" >}}
-See my Unsplash Profile
-{{< /button >}}
