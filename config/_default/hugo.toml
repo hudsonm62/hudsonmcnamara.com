@@ -59,3 +59,8 @@ enableGitInfo = true
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = true # strips out spaces between some icons/text if false
