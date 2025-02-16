@@ -9,7 +9,9 @@
     "build:prod": "hugo --environment production && npm run build",
     "clean": "rimraf site .hugo_build.lock resources public && hugo mod clean --all",
     "clean:node": "rimraf node_modules",
-    "lint": "prettier . -c && markdownlint **/*.md --ignore node_modules",
+    "lint": "npm run lint:prettier && npm run lint:markdown",
+    "lint:prettier": "prettier . -c",
+    "lint:markdown": "markdownlint **/*.md --ignore node_modules",
     "lint:write": "prettier . -w"
   },
   "devDependencies": {
