@@ -10,9 +10,12 @@
 *.json          text
 .prettierrc     text
 *.Dockerfile    text
+*.webmanifest   text
 
 # LF => CRLF
 
 
 # binary
 *.jpg binary
+*.png binary
+*.ico binary
