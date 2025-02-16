@@ -1,9 +1,9 @@
 name: 📦 Deploy Hugo Site
 
 on:
-  # push:
-  #   branches:
-  #     - master
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
@@ -76,7 +76,7 @@ jobs:
       - name: 🔨 Build Hugo Production Site
         run: npm run build:prod
 
-      # Setup for Publishing
+      # Publish
       - name: ⚙️ Setup Pages
         uses: actions/configure-pages@v5
 
@@ -85,11 +85,5 @@ jobs:
         with:
           path: ./public
 
-  # Deploy Pages
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
       - name: ⏺ Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
