@@ -4,7 +4,7 @@
   "scripts": {
     "new-post": "hugo new content posts/my-new-post/index.md",
     "new-project": "hugo new content --kind project projects/my-new-project/index.md",
-    "serve": "hugo server --disableFastRender -D -E -F --gc --noBuildLock --enableGitInfo",
+    "serve": "hugo server --disableFastRender -D -E -F --gc --noBuildLock",
     "build": "hugo build --minify --baseURL https://hudsonmcnamara.com/ --ignoreCache",
     "build:prod": "hugo --environment production && npm run build",
     "clean": "rimraf site .hugo_build.lock resources public && hugo mod clean --all",
