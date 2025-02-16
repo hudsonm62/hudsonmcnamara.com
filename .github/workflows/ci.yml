@@ -13,7 +13,7 @@ defaults:
     shell: bash
 
 env:
-  HUGO_GOCACHE: /home/runner/.cache/hugo_cache
+  HUGO_GOCACHE: /tmp/hugo_cache_runner
   NODE_VERSION: 22.x
 
 jobs:
