@@ -1,5 +1,5 @@
 {
-  "name": "hudsonmcnamara.com.au",
+  "name": "hudsonmcnamara.com",
   "private": true,
   "scripts": {
     "new-post": "hugo new content posts/my-new-post/index.md",
@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "prettier": "^3.5.1",
+    "prettier-plugin-toml": "^2.0.1",
     "rimraf": "^6.0.1",
     "markdownlint-cli": "^0.44.0"
   }

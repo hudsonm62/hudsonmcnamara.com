@@ -11,35 +11,35 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Home"
-  pageRef = "/"
-  weight = 1
+name = "Home"
+pageRef = "/"
+weight = 1
 
 [[main]]
-  name = "Projects"
-  pageRef = "projects"
-  weight = 10
+name = "Projects"
+pageRef = "projects"
+weight = 10
 
 [[main]]
-  name = "About"
-  pageRef = "about"
-  weight = 20
+name = "About"
+pageRef = "about"
+weight = 20
 
 [[main]]
-  name = "Tags"
-  parent = "Blog"
-  pageRef = "tags"
-  weight = 30
+name = "Tags"
+parent = "Blog"
+pageRef = "tags"
+weight = 30
 
 [[main]]
-  name = "Blog"
-  pageRef = "posts"
-  weight = 40
+name = "Blog"
+pageRef = "posts"
+weight = 40
 [[main]]
-  name = "Posts"
-  parent = "Blog"
-  pageRef = "posts"
-  weight = 10
+name = "Posts"
+parent = "Blog"
+pageRef = "posts"
+weight = 10
 
 #[[subnavigation]]
 #  name = "An interesting topic"
@@ -51,13 +51,13 @@
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
-  identifier = "tags2"
-  pre = "tag"
-  pageRef = "tags"
-  weight = 10
+identifier = "tags2"
+pre = "tag"
+pageRef = "tags"
+weight = 10
 
 [[footer]]
-  identifier = "rss"
-  pre = "rss"
-  url = "https://hudsonmcnamara.com/index.xml"
-  weight = 20
+identifier = "rss"
+pre = "rss"
+url = "https://hudsonmcnamara.com/index.xml"
+weight = 20
