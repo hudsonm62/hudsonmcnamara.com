@@ -1,0 +1,14 @@
+# Hugo/Blowfish
+.hugo_build.lock
+public
+resources
+
+# Node
+node_modules
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+.idea

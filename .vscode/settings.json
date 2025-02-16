@@ -1,0 +1,21 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4,
+  "files.exclude": {
+    "node_modules": true,
+    "public": true,
+    ".hugo_build.lock": true,
+    "resources": true,
+    "**/.DS_Store": true
+  },
+  "go.tasks.provideDefault": false,
+  "cSpell.checkOnlyEnabledFileTypes": true,
+  "cSpell.enabledFileTypes": {
+    "*": false,
+    "toml": true,
+    "markdown": true,
+    "yml": true
+  }
+}

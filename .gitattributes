@@ -1,0 +1,18 @@
+# Default git behavior
+* text=auto
+
+# CRLF => LF
+*.md            text
+*.gitattributes text
+*.gitignore     text
+*.svg           text
+*.jsonc         text
+*.json          text
+.prettierrc     text
+*.Dockerfile    text
+
+# LF => CRLF
+
+
+# binary
+*.jpg binary

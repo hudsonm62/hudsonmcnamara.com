@@ -1,0 +1,96 @@
+name: Deploy Hugo Site
+
+on:
+  # push:
+  #   branches:
+  #     - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  NODE_VERSION: 22.x
+  HUGO_VERSION: 0.143.1
+  HUGO_GOCACHE: /home/runner/.cache/hugo_cache
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⚙️ Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node
+        id: npm-cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: 📦 Install NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: 🚀 Check Project lint
+        run: npm run lint
+
+  build:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: ⚙️ Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Build Site
+      - name: ⚙️ Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: 📦 Cache Hugo Modules
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_GOCACHE }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: ⚙️ Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 🔨 Build Hugo Production Site
+        run: npm run build:prod
+
+      # Setup for Publishing
+      - name: ⚙️ Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: ⏫ Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  # Deploy Pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⏺ Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

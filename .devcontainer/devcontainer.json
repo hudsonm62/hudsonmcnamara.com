@@ -1,0 +1,36 @@
+{
+  "dockerFile": "Dockerfile", // Go, Hugo, Node, non-root user
+  "postCreateCommand": {
+    "git-safe": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+    "npm-ci": "npm ci"
+  },
+
+  // Take ownership of files
+  "postStartCommand": "sudo chown -R \"$(id -u):$(id -g)\" $PWD",
+
+  "postAttachCommand": "npm run clean",
+
+  // use non-root user (// comment out to use 'root')
+  //"remoteUser": "vscode",
+
+  // Setup Container Environment
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "tamasfe.even-better-toml",
+        "davidanson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "golang.go",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-australian-english",
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker"
+      ]
+    },
+    "codespaces": {
+      "openFiles": ["README.md"]
+    }
+  },
+  // serve port
+  "forwardPorts": [1313]
+}

@@ -1,0 +1,145 @@
+# -- Theme Options --
+# These options control how the theme functions and allow you to
+# customise the display of your website.
+#
+# Refer to the theme docs for more details about each of these parameters.
+# https://blowfish.page/docs/configuration/#theme-parameters
+
+colorScheme = "ocean"
+defaultAppearance = "dark" # valid options: light or dark
+autoSwitchAppearance = false
+
+enableSearch = true
+enableCodeCopy = true
+
+disableImageZoom = true
+
+replyByEmail = false
+
+mainSections = ["posts"]
+# robots = ""
+
+disableImageOptimization = false
+disableTextInHeader = false
+# backgroundImageWidth = 1200
+
+# defaultBackgroundImage = "IMAGE.jpg" # used as default for background images
+# defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
+
+highlightCurrentMenuArea = true
+smartTOC = true
+# smartTOCHideUnfocusedChildren = true
+
+giteaDefaultServer = "https://git.fsfe.org"
+forgejoDefaultServer = "https://v8.next.forgejo.org"
+
+[header]
+  layout = "fixed-fill-blur" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = false
+  showScrollToTop = true
+
+[homepage]
+  layout = "background" # valid options: page, profile, hero, card, background, custom
+  layoutBackgroundBlur = true # only used when layout equals background
+  homepageImage = "/img/background.JPG" # used in: hero, and card
+  showRecent = true
+  showRecentItems = 3
+  showMoreLink = true
+  showMoreLinkDest = "/posts/"
+  cardView = false
+  cardViewScreenWidth = false
+
+[article]
+  showDate = true
+  showViews = false
+  showLikes = false
+  showDateOnlyInArticle = false
+  showDateUpdated = false
+  showAuthor = true
+  showAuthorBottom = false
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
+  layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = true
+  editURL = "https://github.com/hudsonm62/hudsonmcnamara.com/blob/master"
+  editAppendPath = true
+  seriesOpened = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = true
+  showRelatedContent = true
+  relatedContentLimit = 3
+  showTaxonomies = true
+  showAuthorsBadges = false
+  showWordCount = true
+  sharingLinks = [ "linkedin", "bluesky", "mastodon", "reddit", "email"]
+  showZenMode = false
+
+[list]
+  showHero = false
+  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
+  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+  showBreadcrumbs = true
+  showSummary = true
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  showCards = false
+  orderByWeight = false
+  groupByYear = true
+  cardView = true
+  cardViewScreenWidth = false
+  constrainItemsWidth = true
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  cardView = false
+
+[term]
+  showHero = false
+  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = true
+  groupByYear = false
+  cardView = false
+  cardViewScreenWidth = false
+
+[buymeacoffee]
+  identifier = "ziroAU"
+  globalWidget = true
+  globalWidgetMessage = "Have I helped you?"
+  globalWidgetColor = "#445e87"
+  globalWidgetPosition = "Right"
+
+[verification]
+  # google = ""
+  # bing = ""
+  # pinterest = ""
+  # yandex = ""
+  # fediverse = ""
+
+[rssnext]
+  # feedId = ""
+  # userId = ""

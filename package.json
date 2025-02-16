@@ -1,0 +1,20 @@
+{
+  "name": "hudsonmcnamara.com.au",
+  "private": true,
+  "scripts": {
+    "new-post": "hugo new content posts/my-new-post/index.md",
+    "new-project": "hugo new content --kind project projects/my-new-project/index.md",
+    "serve": "hugo server --disableFastRender -D -E -F --gc --noBuildLock --enableGitInfo",
+    "build": "hugo build --minify --baseURL https://hudsonmcnamara.com/ --ignoreCache",
+    "build:prod": "hugo --environment production && npm run build",
+    "clean": "rimraf site .hugo_build.lock resources public && hugo mod clean --all",
+    "clean:node": "rimraf node_modules",
+    "lint": "prettier . -c && markdownlint **/*.md --ignore node_modules",
+    "lint:write": "prettier . -w"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.1",
+    "rimraf": "^6.0.1",
+    "markdownlint-cli": "^0.44.0"
+  }
+}

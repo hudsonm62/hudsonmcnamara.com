@@ -1,0 +1,86 @@
+name: Deploy Hugo Site
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      HUGO_VERSION:
+        default: 0.143.1
+        type: number
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  HUGO_GOCACHE: /home/runner/.cache/hugo_cache
+  NODE_VERSION: 22.x
+
+jobs:
+  test-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⚙️ Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup/Cache Node
+        id: npm-cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: 📦 Install NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: ✨ Check Formatting
+        run: npm run lint
+
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⚙️ Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Build Site
+      - name: ⚙️ Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ inputs.HUGO_VERSION }}
+          extended: true
+
+      - name: ⚙️ Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 📦 Cache Hugo Modules
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_GOCACHE }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: 🔨 Build Hugo Site
+        run: npm run build
+
+      - name: 🍕 Get Short SHA
+        uses: hudsonm62/short-sha@v1
+        id: short-sha
+
+      - name: ⏰ Get current time
+        uses: josStorer/get-current-time@v2
+        id: current-time
+        with:
+          format: YYYY-MM-DD_HH-mm-ss
+
+      - name: ⬆ Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hugosite-${{ steps.short-sha.outputs.sha }}-${{ steps.current-time.outputs.formattedTime }}
+          path: public
+          compression-level: 9
