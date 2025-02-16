@@ -39,7 +39,6 @@ jobs:
           cache: npm
 
       - name: 📦 Install NPM Packages
-        if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: 🚀 Check Project lint
