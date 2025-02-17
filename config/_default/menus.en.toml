@@ -41,6 +41,12 @@ parent = "Blog"
 pageRef = "posts"
 weight = 10
 
+[[main]]
+identifier = "unsplash"
+pre = "camera-solid"
+url = "https://unsplash.com/@ziroau"
+weight = 50
+
 #[[subnavigation]]
 #  name = "An interesting topic"
 #  pageRef = "tags/interesting-topic"
