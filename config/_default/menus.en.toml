@@ -51,12 +51,14 @@ weight = 10
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
+name = " "
 identifier = "bmc"
 pre = "bmc-logo"
 url = "https://buymeacoffee.com/ziroau"
 weight = 1
 
 [[footer]]
+name = " "
 identifier = "tags2"
 pre = "tag"
 pageRef = "tags"
