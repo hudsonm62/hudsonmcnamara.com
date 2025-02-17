@@ -17,5 +17,9 @@
     "toml": true,
     "markdown": true,
     "yml": true
-  }
+  },
+  "cSpell.words": [
+    "merch",
+    "Selfhosted"
+  ]
 }
