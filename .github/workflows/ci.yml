@@ -84,14 +84,14 @@ jobs:
         id: short-sha
 
       - name: ⏰ Get current time
-        uses: josStorer/get-current-time@v2
-        id: current-time
+        uses: hudsonm62/datetime-action@v1
+        id: time
         with:
-          format: YYYY-MM-DD_HH-mm-ss
+          format: yyyy-MM-dd_HH-mm-ss
 
       - name: ⬆ Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: hugosite-${{ steps.short-sha.outputs.sha }}-${{ steps.current-time.outputs.formattedTime }}
+          name: hugosite-${{ steps.short-sha.outputs.sha }}-${{ steps.time.outputs.formatted }}
           path: public
           compression-level: 9
