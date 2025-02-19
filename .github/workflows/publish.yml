@@ -25,13 +25,15 @@ env:
   HUGO_GOCACHE: /tmp/hugo_cache_runner
 
 jobs:
-  lint:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: ⚙️ Checkout Repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: ⚙️ Setup Node
+      - name: ⚙️ Setup/Cache Node
         id: npm-cache
         uses: actions/setup-node@v4
         with:
@@ -43,15 +45,6 @@ jobs:
 
       - name: 🚀 Check Project lint
         run: npm run lint
-
-  build:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: ⚙️ Checkout Repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       # Build Site
       - name: ⚙️ Setup Hugo
@@ -67,11 +60,6 @@ jobs:
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
-
-      - name: ⚙️ Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
 
       - name: 🔨 Build Hugo Production Site
         run: npm run build:prod
