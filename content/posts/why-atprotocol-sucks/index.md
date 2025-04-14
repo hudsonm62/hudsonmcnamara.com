@@ -2,7 +2,7 @@
 title: Why Bluesky's ATProtocol Sucks
 date: 2025-04-09
 draft: false
-description: "Why Bluesky's ATProtocol Sucks - An opinion piece of it's flaws and why it is currently not a truly decentralized social media platform (in practice)."
+description: "Why Bluesky's ATProtocol Sucks - An opinion piece of its flaws and why it is currently not a truly decentralized social media platform (in practice)."
 summary: "Opinion on the flaws of Bluesky & ATProtocol in practice."
 tags:
   - Decentralization
@@ -30,8 +30,7 @@ Perhaps this might change in the future, but as it stands, ATProtocol is not tru
 
 ## 2. Exclusivity
 
-Bluesky is very much an exclusive platform, for Bluesky users only. You can't just create an account on a random server/instance of your choosing, and connect to Bluesky -- You have to sign up TO Bluesky itself. Again, this is not decentralization, this is just a different way of doing things under the guise of it's umbrella.
-
+Bluesky is very much an exclusive platform, for Bluesky users only. You can't just create an account on a random server/instance of your choosing, and connect to Bluesky -- You have to sign up TO Bluesky itself. Again, this is not decentralization, this is just a different way of doing things under the guise of its umbrella.
 The reason ActivityPub works so well, is because each server/instance is **independent** AND _mostly_ compatible with/of each other. ATProtocol is not like this, and it is not designed to be like this. It is designed to be a closed ecosystem, where Bluesky can control/moderate everything that happens on it. Your **personal data server is just a glorified backup of your Bluesky account**, and you are still reliant on Bluesky to connect to other servers.
 
 What happens if Bluesky decides to shut down _tomorrow_? Your PDS is nearly useless, and you have no way of connecting to other servers.
@@ -59,8 +58,7 @@ Think about it, if you don't like the way an **open-source** product works, why 
 **ATProtocol is not a new idea**, and (in my opinion) **it is not a better idea**. They should have just contributed to ActivityPub's spec (and ultimately the Fediverse), instead of trying to capitalize on their own product. It is a **purely corporate move**, and it is not in the best interest of the users.
 
 At the end of the day, Bluesky is simply _another_ "Alternative to Twitter", and **cannot be compared to other Fediverse platforms** like [Mastodon], [Pleroma](https://pleroma.social/), or [Pixelfed](https://pixelfed.org/) (which are all ActivityPub compatible). Until there are **more** ATProtocol compatible platforms where I can connect a PDS to, I will not be using or recommending it. Keep in mind that ATProtocol is still in it's early stages, but lack of adoption outside of Bluesky itself is a huge red flag.
-
-If you only care about the social media aspect of it, then sure, go ahead and use Bluesky. But if you care about the **decentralization**, **interoperability**, and **freedom** of your data, then you should definitely consider using a platform that is built for compatibility with the Fediverse.
+At the end of the day, Bluesky is simply _another_ "Alternative to Twitter", and **cannot be compared to other Fediverse platforms** like [Mastodon], [Pleroma](https://pleroma.social/), or [Pixelfed](https://pixelfed.org/) (which are all ActivityPub compatible). Until there are **more** ATProtocol compatible platforms where I can connect a PDS to, I will not be using or recommending it. Keep in mind that ATProtocol is still in its early stages, but lack of adoption outside of Bluesky itself is a huge red flag.
 
 For the non-technical & non-caring, Bluesky is probably the best option for you -- But for the tech-savvy and high-profile users, I would personally recommend looking into [Mastodon](https://joinmastodon.org/) or other ActivityPub compatible platforms.
 
