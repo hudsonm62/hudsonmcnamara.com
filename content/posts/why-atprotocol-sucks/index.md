@@ -1,9 +1,9 @@
 ---
 title: Why Bluesky's ATProtocol Sucks
 date: 2025-04-09
-draft: true
-description: "Why Bluesky's ATProtocol Sucks - A breakdown of the flaws in Bluesky's ATProtocol and why it is not a true decentralized social media platform."
-summary: "The flaws in Bluesky's ATProtocol and why it is not truly decentralized."
+draft: false
+description: "Why Bluesky's ATProtocol Sucks - An opinion piece of it's flaws and why it is currently not a truly decentralized social media platform (in practice)."
+summary: "Opinion on the flaws of Bluesky & ATProtocol in practice."
 tags:
   - Decentralization
   - Social Media
@@ -12,15 +12,19 @@ tags:
 
 ## Quick Rundown
 
-Bluesky's ATProtocol is a "[Distributed Social Networking Protocol](https://en.wikipedia.org/wiki/Distributed_Social_Networking_Protocol)" - _Essentially_, it's a way to create a social media platform that is **not controlled by a single entity**. This sounds great in theory (as [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub) & [Mastodon] as proved), but the ATProtocol in practice has some serious (& seemingly intentional) flaws.
+Bluesky's ATProtocol is a "[Distributed Social Networking Protocol](https://en.wikipedia.org/wiki/Distributed_Social_Networking_Protocol)" - _Essentially_, it's a way to create a social media platform that is **not controlled by a single entity**. This sounds great in theory (as [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub) & [Mastodon] is proving), but the ATProtocol in practice has some serious _and seemingly intentional_ flaws.
 
-## 1. ATProtocol is NOT Decentralized
+A lot of people may not agree with me on a technical standpoint, but keep in mind there are more non-technical users than there are technically adept -- Just because it does this cool encryption thing A, or Identity thing B, which other protocols don't do (or at least not in the same way), doesn't mean it's a good idea for the average person and the 'industry' of decentralized social networking at a high level.
 
-Assuming you're familiar with the concept--When you think of a decentralized social media platform, you probably think of something like [Mastodon]. In Mastodon, you can run your own server (aka "instance") and connect to other servers, meaning said servers own and moderate their own content, contributing to the larger picture (via ActivityPub). This is **true** decentralization - Full control over data and how it's shared across the [Fediverse](https://en.wikipedia.org/wiki/Fediverse).
+I will be focusing on the **practical** implications of ATProtocol, and why I think it is not a good idea to use it (especially as a replacement for ActivityPub).
 
-Whilst [ATProtocol allows you to run your own server](https://atproto.com/guides/self-hosting) (called a Personal Data Server in ATP terms), it is **not** decentralized in the same way. Right now, you can only connect your PDS to Bluesky's servers, meaning you are still reliant on Bluesky to connect to other servers. Any "competitors" currently using the ATProtocol, is largely incompatible with Bluesky itself and the rest of the ecosystem.
+## 1. NOT Decentralized (for the most part)
 
-This means that Bluesky can still control the protocol and how it's used, which defeats the purpose entirely.
+Assuming you're familiar with the concept--When you think of a decentralized social media platform, you probably think of something like [Mastodon] or [Lemmy](https://join-lemmy.org/). In Mastodon, you can run your own server (aka "instance") and connect to other servers, meaning said servers own and moderate their own content, contributing to the larger picture (via ActivityPub). This is **true** decentralization - Full control over data and how it's shared across the respective protocols [Fediverse](https://en.wikipedia.org/wiki/Fediverse).
+
+Whilst [ATProtocol allows you to run your own server](https://atproto.com/guides/self-hosting) (called a Personal Data Server in ATP terms), it is **not** decentralized in the same way. Right now, you can only connect your PDS to Bluesky's servers, meaning you are still reliant on Bluesky to connect to other servers. Any "competitors" currently using the ATProtocol, is largely incompatible with Bluesky itself and the rest of the "ecosystem".
+
+This means that Bluesky (and competitors) can still control the protocol and how it's used, which defeats the purpose entirely.
 
 Perhaps this might change in the future, but as it stands, ATProtocol is not truly decentralized, regardless of what Bluesky claims.
 
@@ -30,7 +34,7 @@ Bluesky is very much an exclusive platform, for Bluesky users only. You can't ju
 
 The reason ActivityPub works so well, is because each server/instance is **independent** AND _mostly_ compatible with/of each other. ATProtocol is not like this, and it is not designed to be like this. It is designed to be a closed ecosystem, where Bluesky can control/moderate everything that happens on it. Your **personal data server is just a glorified backup of your Bluesky account**, and you are still reliant on Bluesky to connect to other servers.
 
-What happens if Bluesky decides to shut down? Your PDS is nearly useless, and you have no way of connecting to other servers.
+What happens if Bluesky decides to shut down _tomorrow_? Your PDS is nearly useless, and you have no way of connecting to other servers.
 
 ## 3. Lack of Interoperability
 
@@ -40,32 +44,35 @@ Even [Meta Threads](https://www.threads.net) is more interoperable than ATProtoc
 
 Whilst there are third-party clients to support both, they are not the same as being able to connect to other platforms.
 
-## 4. Shift towards Corporate and Commercial Interests
+## 4. Pure Arrogance
 
-todo - need to research this more
-
-## 5. Pure Arrogance
-
-This is where I get a bit more opinionated (and butthurt lol), but I think it's important to note.
+This is where I get a bit more opinionated than before, but I think it's important to note.
 
 ActivityPub has been around for a while now, and it has a huge community of developers and users behind it with nearly a decade of history. So why would you want to create a new protocol that is not compatible with it?
 
-Bluesky argues it's "because they don't like the way ActivityPub works", and they want to create something new and better. **But in reality**, it's just a way for them to control the narrative and keep users locked into their ecosystem.
+[ATProtocol argues it's own points](https://atproto.com/guides/faq#why-not-use-activity-pub), and they want to create something new and better. **But in reality**, it's just a way for them to control the narrative and keep users locked into their ecosystem.
 
-Think about it, if you don't like the way an **open-source** product works, why not contribute back to try and make it better? It's just stamping your feet and saying "I don't like this, so I'm going to create my own thing".
-
-The only reason BlueSky took off the way it did is because of Musk's takeover of X (formerly Twitter), and was sold by the community as the new alternative created by the Ex Co-Founder of Twitter (Fun Fact! [Jack Dorsey](https://en.wikipedia.org/wiki/Jack_Dorsey) **had already left BlueSky by then**, since he didn't like the corporate direction it was going). Mastodon also saw a huge influx of users during this time despite already being popular in the tech & journalism industry, but it was also a great opportunity for Bluesky to capitalize on that, which they did with wild success.
+Think about it, if you don't like the way an **open-source** product works, why not contribute back to try and make it better? It feels like Bluesky is stamping their feet and saying "I don't like this, so I'm going to create my own thing".
 
 ## Final Remarks
 
-**ATProtocol is not a new idea**, and **it is not a better idea**. They should have just contributed to ActivityPub's spec (and ultimately the Fediverse), instead of trying to capitalize on their own product. It is a **purely corporate move**, and it is not in the best interest of the users.
+**ATProtocol is not a new idea**, and (in my opinion) **it is not a better idea**. They should have just contributed to ActivityPub's spec (and ultimately the Fediverse), instead of trying to capitalize on their own product. It is a **purely corporate move**, and it is not in the best interest of the users.
 
-At the end of the day, Bluesky is simply _another_ "Alternative to Twitter", and **cannot be compared to other Fediverse platforms** like [Mastodon], [Pleroma](https://pleroma.social/), or [Pixelfed](https://pixelfed.org/) (which are all ActivityPub compatible).
+At the end of the day, Bluesky is simply _another_ "Alternative to Twitter", and **cannot be compared to other Fediverse platforms** like [Mastodon], [Pleroma](https://pleroma.social/), or [Pixelfed](https://pixelfed.org/) (which are all ActivityPub compatible). Until there are **more** ATProtocol compatible platforms where I can connect a PDS to, I will not be using or recommending it. Keep in mind that ATProtocol is still in it's early stages, but lack of adoption outside of Bluesky itself is a huge red flag.
 
 If you only care about the social media aspect of it, then sure, go ahead and use Bluesky. But if you care about the **decentralization**, **interoperability**, and **freedom** of your data, then you should definitely consider using a platform that is built for compatibility with the Fediverse.
 
+For the non-technical & non-caring, Bluesky is probably the best option for you -- But for the tech-savvy and high-profile users, I would personally recommend looking into [Mastodon](https://joinmastodon.org/) or other ActivityPub compatible platforms.
+
+## Further Reading & Resources
+
+- [Official ATProtocol Overview](https://atproto.com/guides/overview)
+- [HackerNews Forum | Okay well. I work on Bluesky and helped build the AT Protocol.](https://news.ycombinator.com/item?id=35881905)
+- [bluesky-social/atproto | #1716 - Interoperability with Mastodon/ActivityPub](https://github.com/bluesky-social/atproto/discussions/1716)
+- [Bridgy Fed](https://brid.gy)
+- [Justin McAfee | Comparative Analysis of Decentralized Social Protocols](https://medium.com/1kxnetwork/a-comparative-analysis-of-decentralized-social-protocols-84914d9fca83)
+- [Dennis Schubert | ActivityPub - One protocol to rule them all?](https://overengineer.dev/blog/2018/02/01/activitypub-one-protocol-to-rule-them-all/)
+
 [Mastodon]: https://joinmastodon.org/
 
-<!--TODO - Footnotes and references,-->
-
-Article Photo by <a href="https://unsplash.com/@elenarossini?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Elena Rossini</a> on <a href="https://unsplash.com/photos/a-person-holding-a-smart-phone-in-their-hand-9Xf-jxvfpW8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Article Photo by [Elena Rossini](https://unsplash.com/@elenarossini) on [Unsplash](https://unsplash.com/photos/9Xf-jxvfpW8?&utm_medium=referral&utm_source=unsplash)
