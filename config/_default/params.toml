@@ -138,7 +138,7 @@ globalWidgetPosition = "Right"
 # bing = ""
 # pinterest = ""
 # yandex = ""
-# fediverse = ""
+fediverse = "@hudson@zynk.quest"
 
 [rssnext]
 # feedId = ""
