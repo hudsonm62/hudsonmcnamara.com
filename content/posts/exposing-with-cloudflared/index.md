@@ -14,7 +14,7 @@ For any website services that **need to be exposed to the web**, it's far more s
 
 The learning curve isn't horrible, and the documentation is good. If you run on-prem services that need to be accessed from the outside, I think you should at least be aware of this as an option for both personal and business use.
 
-Cloudflare Tunnels is just a [Proxy Tunnel](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling), and not a direct connection to the web page, not all apps and services will work. While I've yet to come across any unsolvable problems, some things require more configuration than others to work properly over the tunnel (i.e. turning on websockets, setting headers, etc).
+Cloudflare Tunnels are just [Proxy Tunnels](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling), and not a direct connection to the web page, so not all apps and services may work as expected. While I've yet to come across any unsolvable problems, some things require more configuration than others to work properly over the tunnel (i.e. turning on websockets, setting headers, etc).
 
 Cloudflare provides the [cloudflared] agent in [Docker] form, which makes it super easy to spin up and manage your agents.
 
@@ -117,7 +117,7 @@ If you're not using Docker, you can still use the same concept of isolating the 
 
 ### SSO vs WARP Client
 
-[Cloudflare Tunnel]'s provide options to use [Single Sign On (SSO)](#sso-integrations) or Cloudflare's [WARP Client] for authentication into the tunnel'd microservice webpage.
+[Cloudflare Tunnel]'s provide options to use [Single Sign On (SSO)](#sso-integrations) or Cloudflare's [WARP Client] for authentication into the tunneled webpage.
 
 The [WARP Client] can be completely ignored if normal [SSO] is suitable, but if you need something such as **Device-Level Authentication**, the [WARP Client] is the way to go.
 
@@ -132,7 +132,7 @@ The [WARP Client] can be completely ignored if normal [SSO] is suitable, but if 
 
 [Cloudflare Tunnel]: https://www.cloudflare.com/products/tunnel/
 [One Dashboard]: https://one.dash.cloudflare.com
-[WARP Client]: https://developers.cloudflare.com/warp-client/
+[WARP Client]: https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/
 [cloudflared]: https://github.com/cloudflare/cloudflared
 [SSO]: https://www.cloudflare.com/learning/access-management/what-is-sso/
 [Docker Network]: https://docs.docker.com/compose/networking/
