@@ -18,5 +18,13 @@
     "markdown": true,
     "yml": true
   },
-  "cSpell.words": ["butthurt", "Fediverse", "merch", "Selfhosted"]
+  "cSpell.words": [
+    "butthurt",
+    "cloudflared",
+    "Fediverse",
+    "geoblocking",
+    "geolocation",
+    "merch",
+    "Selfhosted"
+  ]
 }
