@@ -1,7 +1,7 @@
 ---
 title: Create Local Account on Windows 11 24H2
 date: 2025-05-07
-draft: true
+draft: false
 description: The newest method to create a local account in Windows 11 24H2 OOBE, since BYPASSNRO was patched away by Microsoft in builds 26120.
 summary: How to create a local account in the latest Windows 11 24H2 builds.
 showTableOfContents: false
