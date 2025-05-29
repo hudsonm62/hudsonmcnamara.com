@@ -23,7 +23,7 @@ During device setup ([known as OOBE](https://en.wikipedia.org/wiki/Out-of-box_ex
 Then run:
 
 ```powershell
-ms-chx:localonly
+start ms-cxh:localonly
 ```
 
 A Windows 10 style window will appear to continue with creating a local account.
