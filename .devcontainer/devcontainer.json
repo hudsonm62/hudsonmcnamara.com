@@ -23,8 +23,7 @@
         "golang.go",
         "streetsidesoftware.code-spell-checker",
         "streetsidesoftware.code-spell-checker-australian-english",
-        "github.vscode-github-actions",
-        "ms-azuretools.vscode-docker"
+        "github.vscode-github-actions"
       ]
     },
     "codespaces": {
