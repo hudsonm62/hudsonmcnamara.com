@@ -18,7 +18,7 @@ enableEmoji = true
 
 enableGitInfo = true
 
-# googleAnalytics = "G-XXXXXXXXX"
+googleAnalytics = "G-G330H1ZLPY"
 
 [pagination]
 pagerSize = 100
