@@ -1,6 +1,6 @@
 ---
 title: Home
-description: ""
+description: "Systems Engineer working in the SMB/MSP space, based in Sydney, Australia. Passionate about technology, automation, and improving processes."
 ---
 
 {{< typeit
