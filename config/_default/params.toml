@@ -48,10 +48,10 @@ layout = "background"                 # valid options: page, profile, hero, card
 layoutBackgroundBlur = true           # only used when layout equals background
 homepageImage = "/img/background.JPG" # used in: hero, and card
 showRecent = true
-showRecentItems = 2
+showRecentItems = 3
 showMoreLink = true
 showMoreLinkDest = "/posts/"
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 
 [article]
@@ -83,7 +83,7 @@ showTaxonomies = true
 showAuthorsBadges = false
 showWordCount = true
 sharingLinks = ["linkedin", "bluesky", "mastodon", "reddit", "email"]
-showZenMode = false
+showZenMode = true
 
 [list]
 showHero = false
