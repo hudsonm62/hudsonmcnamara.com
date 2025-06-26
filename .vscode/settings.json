@@ -18,5 +18,12 @@
     "markdown": true,
     "yml": true
   },
-  "cSpell.words": ["butthurt", "Fediverse", "merch", "Selfhosted"]
+  "cSpell.language": "en-AU",
+  "cSpell.words": [
+    "butthurt",
+    "fediverse",
+    "merch",
+    "selfhosted",
+    "subfolders"
+  ]
 }
