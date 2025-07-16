@@ -18,11 +18,11 @@ sharingLinks: false
 
 <br /><br />
 
-Hey, I'm Hudson! I'm a Systems Engineer working in the SMB/MSP space, based in Sydney 🇦🇺. I design, implement, and optimize cloud and on-site systems to ensure businesses run efficiently, securely, and redundantly.
+Hey, I'm Hudson! I'm an IT System Engineer working in the SMB/MSP space, based in Sydney 🇦🇺. Proficient in a plethora of open-source and proprietary technologies, particularly within the Microsoft 365 & Windows ecosystems.
 
-With a strong background in a plethora of open-source and proprietary technologies—particularly within the [Microsoft 365](https://www.microsoft365.com/) & [Windows](https://www.microsoft.com/en-au/windows) ecosystems, I excel at managing cost-effective infrastructure, automating tasks, and troubleshooting complex issues. I have a particular interest in residential and business automation, leveraging a variety of tools to streamline processes and enhance all-round efficiency.
+With a strong background in a plethora of open-source and proprietary technologies—particularly within the [Microsoft 365](https://www.microsoft365.com/) & [Windows](https://www.microsoft.com/en-au/windows) ecosystems. I excel at managing cost-effective infrastructure, automating tasks, and troubleshooting complex issues. I have a particular interest in residential and business automation, leveraging a variety of tools to streamline processes and enhance all-round efficiency.
 
-Currently, my goal is to expand internationally, gaining experience in diverse markets and cultures. Outside of work, I love tinkering with my HomeLab, 3D Printing, Exploring new Tech, and diving into personal projects. I'm also an avid caffeine drinker, traveler, photographer, and gamer.
+Outside of work, I love tinkering with my HomeLab, 3D Printing, exploring new tech, and diving into personal projects. I'm also an avid caffeine drinker, traveller, photographer, and gamer.
 
 Driven by curiosity and problem-solving, I’m always looking for new challenges and opportunities to grow—both professionally and personally.
 
