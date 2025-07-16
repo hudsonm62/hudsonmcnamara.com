@@ -1,0 +1,27 @@
+disabled: false
+languageCode: en
+languageName: English
+weight: 1
+title: Hudson McNamara
+params:
+  displayName: EN
+  isoCode: en
+  rtl: false
+  dateFormat: January 2006
+  # logo: img/logo.png
+  # secondaryLogo: img/secondary-logo.png
+  # description: My awesome website
+  # copyright: Copy, _right?_ :thinking_face:
+
+  author:
+    name: Hudson McNamara
+    email: hudson@ziroau.com
+    image: img/author.png
+    imageQuality: 96
+    headline: IT & Automation
+    bio: System Engineer
+    links:
+      - email: mailto:hudson@ziroau.com
+      - github: https://github.com/hudsonm62
+      - linkedin: https://linkedin.com/in/hudsonmcnamara
+      - camera-solid: https://unsplash.com/@ziroau
