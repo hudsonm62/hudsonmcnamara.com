@@ -1,5 +1,4 @@
 {
-    "plugins": ["prettier-plugin-toml"],
     "trailingComma": "none",
     "endOfLine": "lf",
     "useTabs": false,
