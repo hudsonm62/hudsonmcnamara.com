@@ -17,10 +17,10 @@ enableEmoji: true
 
 enableGitInfo: true
 
-googleAnalytics: G-G330H1ZLPY
+googleAnalytics: "G-G330H1ZLPY"
 
 pagination:
-  papersize: 100
+  pagerSize: 100
 
 imaging:
   anchor: Center
