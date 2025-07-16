@@ -1,4 +1,15 @@
 {
-  "plugins": ["prettier-plugin-toml"],
-  "trailingComma": "none"
+    "plugins": ["prettier-plugin-toml"],
+    "trailingComma": "none",
+    "endOfLine": "lf",
+    "useTabs": false,
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "files": ["*.yml", "*.md"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
 }

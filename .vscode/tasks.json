@@ -1,36 +1,36 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "type": "npm",
-      "script": "serve",
-      "problemMatcher": ["$go"],
-      "label": "serve",
-      "detail": "hugo server",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
-      "type": "npm",
-      "script": "build",
-      "group": "build",
-      "problemMatcher": ["$go"],
-      "label": "build",
-      "detail": "hugo build"
-    },
-    {
-      "type": "npm",
-      "script": "lint",
-      "problemMatcher": [],
-      "label": "lint"
-    },
-    {
-      "type": "npm",
-      "script": "lint:write",
-      "problemMatcher": [],
-      "label": "lint:write"
-    }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "serve",
+            "problemMatcher": ["$go"],
+            "label": "serve",
+            "detail": "hugo server",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "group": "build",
+            "problemMatcher": ["$go"],
+            "label": "build",
+            "detail": "hugo build"
+        },
+        {
+            "type": "npm",
+            "script": "lint",
+            "problemMatcher": [],
+            "label": "lint"
+        },
+        {
+            "type": "npm",
+            "script": "lint:write",
+            "problemMatcher": [],
+            "label": "lint:write"
+        }
+    ]
 }
