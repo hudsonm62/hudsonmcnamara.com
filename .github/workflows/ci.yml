@@ -20,8 +20,24 @@ jobs:
       - name: ⚙️ Checkout Repo
         uses: actions/checkout@v4
 
-      - name: ✨ Check Project Lint
-        uses: ./.github/actions/lint-all
+      - name: ⚙️ Setup/Cache Node
+        id: npm-cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: 📦 Install NPM Packages
+        run: npm ci
+
+      - name: ✨ Check Prettier Formatting
+        run: npm run lint:prettier
+
+      - name: ✨ Markdownlint CLi Action
+        uses: DavidAnson/markdownlint-cli2-action@v20
+        with:
+          globs: "**/*.md"
+          config: .markdownlint.jsonc
 
   test-build:
     runs-on: ubuntu-latest
