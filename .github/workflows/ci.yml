@@ -20,6 +20,12 @@ jobs:
       - name: ⚙️ Checkout Repo
         uses: actions/checkout@v4
 
+      - name: ✨ Markdownlint CLi Action
+        uses: DavidAnson/markdownlint-cli2-action@v20
+        with:
+          globs: "**/*.md"
+          config: .markdownlint.jsonc
+
       - name: ⚙️ Setup/Cache Node
         id: npm-cache
         uses: actions/setup-node@v4
@@ -32,14 +38,6 @@ jobs:
 
       - name: ✨ Check Prettier Formatting
         run: npm run lint:prettier
-
-      - name: ✨ Markdownlint CLi Action
-        uses: DavidAnson/markdownlint-cli2-action@v20
-        with:
-          globs: |
-            "**/*.md"
-            "!node_modules"
-          config: .markdownlint.jsonc
 
   test-build:
     runs-on: ubuntu-latest
