@@ -36,7 +36,9 @@ jobs:
       - name: ✨ Markdownlint CLi Action
         uses: DavidAnson/markdownlint-cli2-action@v20
         with:
-          globs: "**/*.md"
+          globs: |
+            "**/*.md"
+            "!node_modules"
           config: .markdownlint.jsonc
 
   test-build:
