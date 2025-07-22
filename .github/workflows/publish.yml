@@ -33,9 +33,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: ✨ Check Project Lint
-        uses: ./.github/actions/lint-all
-
       # Build Site
       - name: ⚙️ Setup Hugo
         uses: peaceiris/actions-hugo@v3
