@@ -33,18 +33,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: ⚙️ Setup/Cache Node
-        id: npm-cache
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-
-      - name: 📦 Install NPM Packages
-        run: npm ci
-
-      - name: 🚀 Check Project lint
-        run: npm run lint
+      - name: ✨ Check Project Lint
+        uses: ./.github/actions/lint-all
 
       # Build Site
       - name: ⚙️ Setup Hugo
@@ -65,11 +55,9 @@ jobs:
         run: npm run build:prod
 
       # Publish
-      - name: ⚙️ Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: ⏫ Upload artifact
         uses: actions/upload-pages-artifact@v3
+        id: upload
         with:
           path: ./public
 

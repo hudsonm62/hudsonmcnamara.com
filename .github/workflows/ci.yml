@@ -20,24 +20,8 @@ jobs:
       - name: ⚙️ Checkout Repo
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup/Cache Node
-        id: npm-cache
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-
-      - name: 📦 Install NPM Packages
-        run: npm ci
-
-      - name: ✨ Check Prettier Formatting
-        run: npm run lint:prettier
-
-      - name: ✨ Check Markdown
-        uses: DavidAnson/markdownlint-cli2-action@v20
-        with:
-          globs: "**/*.md"
-          config: ".markdownlint.jsonc"
+      - name: ✨ Check Project Lint
+        uses: ./.github/actions/lint-all
 
   test-build:
     runs-on: ubuntu-latest
@@ -70,19 +54,13 @@ jobs:
       - name: 🔨 Build Hugo Site
         run: npm run build
 
-      - name: 🍕 Get Short SHA
-        uses: hudsonm62/short-sha@v1
-        id: short-sha
-
-      - name: ⏰ Get current time
-        uses: hudsonm62/datetime-action@v1
-        id: time
-        with:
-          format: yyyy-MM-dd_HH-mm-ss
+      - name: 🌌 Get Run Metadata
+        id: setup-meta
+        uses: ./.github/actions/get-metadata
 
       - name: ⬆ Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: hugosite-${{ steps.short-sha.outputs.sha }}-${{ steps.time.outputs.formatted }}
+          name: hugosite-${{ steps.setup-meta.outputs.short-sha }}-${{ steps.setup-meta.outputs.timestamp }}
           path: public
           compression-level: 9
