@@ -75,7 +75,7 @@ jobs:
         uses: ./.github/actions/get-metadata
 
       - name: ⬆ Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: hugosite-${{ steps.setup-meta.outputs.short-sha }}-${{ steps.setup-meta.outputs.timestamp }}
           path: public
