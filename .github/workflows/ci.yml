@@ -26,18 +26,11 @@ jobs:
           globs: "**/*.md"
           config: .markdownlint.jsonc
 
-      - name: ⚙️ Setup/Cache Node
-        id: npm-cache
-        uses: actions/setup-node@v6
+      - name: ✨ Prettier Action
+        uses: creyD/prettier_action@v4.6
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-
-      - name: 📦 Install NPM Packages
-        run: npm ci
-
-      - name: ✨ Check Prettier Formatting
-        run: npm run lint:prettier
+          prettier_options: --config .prettierrc --check .
+          dry: true
 
   test-build:
     runs-on: ubuntu-latest
