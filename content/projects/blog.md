@@ -8,7 +8,8 @@ summary: "Random posts, technical instructions, and more whenever I feel like wr
 showReadingTime: false
 tags:
   - website
-_build:
-  render: "false"
-  list: "local"
+build:
+  render: false
+  list: local
+  publishResources: false
 ---

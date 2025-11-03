@@ -9,7 +9,8 @@ tags:
   - unreleased
   - PowerShell
   - Automation
-_build:
-  render: "false"
-  list: "local"
+build:
+  render: false
+  list: local
+  publishResources: false
 ---

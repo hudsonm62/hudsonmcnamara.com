@@ -7,8 +7,8 @@ summary: "🧛🏻‍♂️ Dark theme for Microsoft Edge"
 showReadingTime: false
 tags:
   - Theme
-_build:
-  render: "false"
-  list: "local"
-type: "projects"
+build:
+  render: false
+  list: local
+  publishResources: false
 ---
