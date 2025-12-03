@@ -59,4 +59,32 @@ jobs:
           path: ./public
 
       - name: ⏺ Deploy to GitHub Pages
+        id: deploy
         uses: actions/deploy-pages@v4
+
+      - name: 🔔 Ntfy Deployment Success
+        if: steps.deploy.outcome == 'success'
+        shell: pwsh
+        env:
+          NTFY_URLTOPIC: ${{ secrets.NTFY_URLTOPIC }}
+          NTFY_USER: ${{ secrets.NTFY_USER }}
+          NTFY_PW: ${{ secrets.NTFY_PW }}
+        run: |
+          # Send notification to ntfy instance
+          $Credential = [PSCredential]::new($env:NTFY_USER, (ConvertTo-SecureString -String '$env:NTFY_PW' -AsPlainText -Force))
+          $NtfyHeaders = @{
+              Actions = "view, Open GitHub, https://github.com/hudsonm62/hudsonmcnamara.com; view, See Website, https://hudsonmcnamara.com"
+              Title = "Website Deployment Successful!"
+              Tags = "hammer"
+              Icon = "https://hudsonmcnamara.com/img/author.png"
+          }
+          $Request = @{
+              Method = "POST"
+              URI = "$env:NTFY_URLTOPIC"
+              Authentication = "Basic"
+              Credential = $Credential
+              Headers = $NtfyHeaders
+              Body = "hudsonmcnamara.com has been successfully deployed via GitHub Actions."
+          }
+
+          Invoke-RestMethod @Request
