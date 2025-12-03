@@ -18,15 +18,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⚙️ Checkout Repo
+        id: checkout
         uses: actions/checkout@v6
 
-      - name: ✨ Markdownlint CLi Action
+      - name: ✨ Markdownlint CLi2 Action
+        if: steps.checkout.outcome == 'success' && !cancelled()
         uses: DavidAnson/markdownlint-cli2-action@v21
         with:
           globs: "**/*.md"
-          config: .markdownlint.jsonc
+          config: .markdownlint-cli2.jsonc
 
       - name: ✨ Prettier Action
+        if: steps.checkout.outcome == 'success' && !cancelled()
         uses: creyD/prettier_action@v4.6
         with:
           prettier_options: --config .prettierrc --check .
