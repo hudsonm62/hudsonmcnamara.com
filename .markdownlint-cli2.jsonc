@@ -1,0 +1,11 @@
+{
+    "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/refs/heads/main/schema/markdownlint-cli2-config-schema.json",
+    "config": {
+        "default": true,
+        "MD013": false, // Disable max line length
+        "MD033": false, // Allow Inline HTML
+        "MD034": false // Allow bare URLs
+    },
+    "gitignore": true,
+    "globs": ["**/*.md"]
+}

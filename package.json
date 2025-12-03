@@ -11,12 +11,12 @@
         "clean:node": "rimraf node_modules",
         "lint": "npm run lint:prettier && npm run lint:markdown",
         "lint:prettier": "prettier . -c",
-        "lint:markdown": "markdownlint **/*.md --ignore node_modules",
+        "lint:markdown": "markdownlint-cli2 --config .markdownlint-cli2.jsonc",
         "lint:write": "prettier . -w"
     },
     "devDependencies": {
         "prettier": "^3.5.1",
         "rimraf": "^6.0.1",
-        "markdownlint-cli": "^0.44.0"
+        "markdownlint-cli2": "^0.19.1"
     }
 }
