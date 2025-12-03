@@ -71,7 +71,7 @@ jobs:
           NTFY_PW: ${{ secrets.NTFY_PW }}
         run: |
           # Send notification to ntfy instance
-          $Credential = [PSCredential]::new($env:NTFY_USER, (ConvertTo-SecureString -String '$env:NTFY_PW' -AsPlainText -Force))
+          $Credential = [PSCredential]::new($env:NTFY_USER, (ConvertTo-SecureString -String "$env:NTFY_PW" -AsPlainText -Force))
           $NtfyHeaders = @{
               Actions = "view, Open GitHub, https://github.com/hudsonm62/hudsonmcnamara.com; view, See Website, https://hudsonmcnamara.com"
               Title = "Website Deployment Successful!"
