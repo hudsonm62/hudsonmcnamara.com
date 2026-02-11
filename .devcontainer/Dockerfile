@@ -1,6 +1,6 @@
 # Dockerfile for Dev Container
 ## Installs Go, Hugo & Node
-FROM golang:1.25-bookworm
+FROM golang:1.26-bookworm
 
 # setup non root user
 ARG USERNAME=vscode
