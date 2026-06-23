@@ -41,7 +41,7 @@ jobs:
           extended: true
 
       - name: 📦 Cache Hugo Modules
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ${{ env.HUGO_GOCACHE }}
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
