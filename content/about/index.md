@@ -107,6 +107,7 @@ Tools, software and technologies I have considerable experience in using (in no 
 - {{< icon "tailwindcss" >}} **Tailwind CSS**
 - {{< icon "sass" >}} **Sass**
 - {{< icon "react" >}} **React** / {{< icon "nextdotjs" >}} **Next.js**
+- {{< icon "kotlin" >}} **Kotlin**
 - {{< icon "cplusplus" >}} **C++**
 - {{< icon "unrealengine" >}} **Unreal Engine**
 - {{< icon "vr-cardboard-solid" >}} **OpenXR**
@@ -116,6 +117,7 @@ Tools, software and technologies I have considerable experience in using (in no 
 - {{< icon "code-branch-solid" >}} **Git**
 - {{< icon "code-solid" >}} **VSCode** / **VSCodium**
 - {{< icon "rider" >}} **Rider**
+- {{< icon "intellijidea" >}} **IntelliJ IDEA**
 - {{< icon "notepadplusplus" >}} **Notepad++**
 - {{< icon "wireshark" >}} **Wireshark**
 - {{< icon "prettier" >}} **Prettier**
