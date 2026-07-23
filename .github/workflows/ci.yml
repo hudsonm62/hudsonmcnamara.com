@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: ⚙️ Checkout Repo
         id: checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: ✨ Markdownlint CLi2 Action
         if: steps.checkout.outcome == 'success' && !cancelled()
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⚙️ Checkout Repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
