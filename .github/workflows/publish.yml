@@ -22,7 +22,7 @@ defaults:
 env:
   HUGO_GOCACHE: /tmp/hugo_cache_runner
   NODE_VERSION: 24.x
-  HUGO_VERSION: 0.149.0
+  HUGO_VERSION: 0.163.3
 
 jobs:
   publish:
