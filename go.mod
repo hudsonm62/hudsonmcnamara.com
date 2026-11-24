@@ -4,5 +4,5 @@ go 1.24.0
 
 require (
 	github.com/nunocoracao/blowfish/v2 v2.106.0 // indirect
-	github.com/nunocoracao/blowfish/v3 v3.9.0 // indirect
+	github.com/nunocoracao/blowfish/v3 v3.11.0 // indirect
 )
